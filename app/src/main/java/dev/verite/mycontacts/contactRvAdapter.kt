@@ -1,7 +1,9 @@
 package dev.verite.mycontacts
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.NetworkPolicy
 import com.squareup.picasso.Picasso
@@ -29,6 +31,17 @@ class ContactRvAdapter(var contactList:List<contact>):
             .centerCrop()
             .networkPolicy(NetworkPolicy.OFFLINE)
             .into(holder.binding.ivContact)
+
+        val context = holder.itemView.context
+        holder.binding.ivContact.setOnClickListener{
+            Toast.makeText(context,"You have clicked on ${currentcontact.name}'s image", Toast.LENGTH_SHORT).show()
+        }
+        holder.binding.cvContact.setOnClickListener {
+            val intent = Intent(context, viewContactActivity::class.java)
+            intent.putExtra("NAME", currentcontact.name)
+            intent.putExtra("EMAIL", currentcontact.email)
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int {
