@@ -6,4 +6,139 @@
     android:layout_height="match_parent"
     tools:context=".viewContactActivity">
 
+    <ImageView
+        android:id="@+id/ivNamee"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_person_24" />
+
+    <TextView
+        android:id="@+id/tvNamee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/christa"
+        app:layout_constraintEnd_toEndOf="@+id/ivNamee"
+        app:layout_constraintStart_toStartOf="@+id/ivNamee"
+        app:layout_constraintTop_toBottomOf="@+id/ivNamee" />
+
+    <ImageView
+        android:id="@+id/ivMessage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNamee"
+        app:srcCompat="@drawable/ic_baseline_sms_24" />
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="16dp"
+        android:text="Message"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivMessage" />
+
+    <ImageView
+        android:id="@+id/ivCall"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="56dp"
+        app:layout_constraintStart_toEndOf="@+id/ivMessage"
+        app:layout_constraintTop_toTopOf="@+id/ivMessage"
+        app:srcCompat="@drawable/ic_baseline_call_24" />
+
+    <TextView
+        android:id="@+id/tvCall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="16dp"
+        android:text="Call"
+        app:layout_constraintStart_toEndOf="@+id/tvMessage"
+        app:layout_constraintTop_toBottomOf="@+id/ivCall" />
+
+    <ImageView
+        android:id="@+id/ivVideo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="56dp"
+        app:layout_constraintStart_toEndOf="@+id/ivCall"
+        app:layout_constraintTop_toTopOf="@+id/ivCall"
+        app:srcCompat="@drawable/ic_baseline_videocam_24" />
+
+    <TextView
+        android:id="@+id/tvVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="16dp"
+        android:text="Video"
+        app:layout_constraintStart_toEndOf="@+id/tvCall"
+        app:layout_constraintTop_toBottomOf="@+id/ivVideo" />
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_navigate_before_24" />
+
+    <TextView
+        android:id="@+id/tvBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Back"
+        app:layout_constraintStart_toEndOf="@+id/ivBack"
+        app:layout_constraintTop_toTopOf="@+id/ivBack" />
+
+    <TextView
+        android:id="@+id/tvNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="123123"
+        app:layout_constraintEnd_toEndOf="@+id/ivNamee"
+        app:layout_constraintStart_toStartOf="@+id/ivNamee"
+        app:layout_constraintTop_toBottomOf="@+id/tvEmaill" />
+
+    <TextView
+        android:id="@+id/tvEmaill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="chri@gmail.com"
+        app:layout_constraintEnd_toEndOf="@+id/ivNamee"
+        app:layout_constraintStart_toStartOf="@+id/ivNamee"
+        app:layout_constraintTop_toBottomOf="@+id/tvNamee" />
+
+    <TextView
+        android:id="@+id/tvAddresse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="616 Korongo Road"
+        app:layout_constraintEnd_toEndOf="@+id/ivNamee"
+        app:layout_constraintStart_toStartOf="@+id/ivNamee"
+        app:layout_constraintTop_toBottomOf="@+id/tvNumber" />
+
+    <ImageView
+        android:id="@+id/ivEdit"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivBack"
+        app:srcCompat="@drawable/ic_baseline_edit_24" />
 </androidx.constraintlayout.widget.ConstraintLayout>
