@@ -1,4 +1,4 @@
-package dev.verite.mycontacts
+package dev.verite.mycontacts.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import com.squareup.picasso.NetworkPolicy
 import com.squareup.picasso.Picasso
+import dev.verite.mycontacts.R
 import dev.verite.mycontacts.databinding.ActivityViewContactBinding
 
 class viewContactActivity : AppCompatActivity() {
@@ -28,7 +29,7 @@ class viewContactActivity : AppCompatActivity() {
             .error(R.drawable.ic_baseline_error_outline_24)
             .resize(300,300)
             .centerCrop()
-            .networkPolicy(NetworkPolicy.OFFLINE)
+            .networkPolicy(NetworkPolicy.NO_CACHE)
             .into(binding.ivNamee)
         val name = extras?.getString("NAME","")
         binding.tvNamee.text = name

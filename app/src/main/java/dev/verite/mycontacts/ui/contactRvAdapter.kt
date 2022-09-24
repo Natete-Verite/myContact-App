@@ -1,4 +1,4 @@
-package dev.verite.mycontacts
+package dev.verite.mycontacts.ui
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -7,14 +7,16 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.NetworkPolicy
 import com.squareup.picasso.Picasso
+import dev.verite.mycontacts.R
 import dev.verite.mycontacts.databinding.ContactListItemBinding
+import dev.verite.mycontacts.models.Contact
 
-class ContactRvAdapter(var contactList:List<contact>):
+class ContactRvAdapter(var contactList:List<Contact>):
     RecyclerView.Adapter<ContactsViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContactsViewHolder {
         var binding =
             ContactListItemBinding.inflate(LayoutInflater.from(parent.context),parent,false)
-        var contactsViewHolder=ContactsViewHolder(binding)
+        var contactsViewHolder= ContactsViewHolder(binding)
         return contactsViewHolder
     }
 
