@@ -23,14 +23,14 @@ class viewContactActivity : AppCompatActivity() {
 
     fun getExtras(){
         val extras = intent.extras
-        val image = extras?.getString("IMAGE","")
-        Picasso.get().load(image)
-            .placeholder(R.drawable.ic_baseline_person_24)
-            .error(R.drawable.ic_baseline_error_outline_24)
-            .resize(300,300)
-            .centerCrop()
-            .networkPolicy(NetworkPolicy.NO_CACHE)
-            .into(binding.ivNamee)
+//        val image = extras?.getString("IMAGE","")
+//        Picasso.get().load(image)
+//            .placeholder(R.drawable.ic_baseline_person_24)
+//            .error(R.drawable.ic_baseline_error_outline_24)
+//            .resize(300,300)
+//            .centerCrop()
+//            .networkPolicy(NetworkPolicy.NO_CACHE)
+//            .into(binding.ivNamee)
         val name = extras?.getString("NAME","")
         binding.tvNamee.text = name
         val email = extras?.getString("EMAIL","")

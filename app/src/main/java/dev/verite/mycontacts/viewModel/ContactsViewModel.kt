@@ -10,6 +10,7 @@ import kotlinx.coroutines.launch
 class ContactsViewModel:ViewModel() {
     val contactsRepository = ContactsRepository()
     lateinit var contactLiveData: LiveData<Contact>
+    lateinit var contactsLiveData: LiveData<List<Contact>>
 
     fun saveContact(contact: Contact){
         viewModelScope.launch {
@@ -20,4 +21,9 @@ class ContactsViewModel:ViewModel() {
     fun fetchContactsById(contactId: Int){
         contactLiveData = contactsRepository.getContactById(contactId)
     }
+
+    fun getAllContacts(){
+        contactsLiveData = contactsRepository.getAllContacts()
+    }
+
 }

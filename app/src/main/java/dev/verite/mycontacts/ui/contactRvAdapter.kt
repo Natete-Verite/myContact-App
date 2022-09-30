@@ -26,13 +26,13 @@ class ContactRvAdapter(var contactList:List<Contact>):
         holder.binding.tvPhoneNumber.text=currentcontact.phoneNumber
         holder.binding.tvEmail.text=currentcontact.email
         holder.binding.tvAddress.text=currentcontact.address
-        Picasso.get().load(currentcontact.image)
-            .placeholder(R.drawable.ic_baseline_person_24)
-            .error(R.drawable.ic_baseline_error_outline_24)
-            .resize(300,300)
-            .centerCrop()
-            .networkPolicy(NetworkPolicy.OFFLINE)
-            .into(holder.binding.ivContact)
+//        Picasso.get().load(currentcontact.image)
+//            .placeholder(R.drawable.ic_baseline_person_24)
+//            .error(R.drawable.ic_baseline_error_outline_24)
+//            .resize(300,300)
+//            .centerCrop()
+//            .networkPolicy(NetworkPolicy.OFFLINE)
+//            .into(holder.binding.ivContact)
 
         val context = holder.itemView.context
         holder.binding.ivContact.setOnClickListener{
