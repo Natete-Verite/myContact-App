@@ -28,21 +28,35 @@ class AddContactActivity : AppCompatActivity() {
     }
 
     fun validateAddContact(){
+
         var name = binding.etName.text.toString()
         var email = binding.etEmail.text.toString()
         var phoneNumber = binding.etPhone.text.toString()
         var address = binding.etAddress.text.toString()
+        var error = false
 
-        //validate
+        if (name.isBlank()) {
+            error = true
+            binding.etName.error = "name is required"
+        }
+        if (email.isBlank()) {
+            error = true
+            binding.etEmail.error = " Email is required"
+        }
+        if (address.isBlank()) {
+            error = true
+            binding.etAddress.error = "Address is required"
+        }
+        if (phoneNumber.isBlank()) {
+            error = true
+            binding.etPhone.error = "PhoneNumber is required"
+        }
 
-        val contact = Contact(
-            contactId = 0,
-            name = name,
-            phoneNumber = phoneNumber,
-            email = email,
-            address = address,
-            image = ""
-        )
+        if (!error) {
+
+        val contact = Contact(contactId = 0, name, phoneNumber, email, address, "")
         contactsViewModel.saveContact(contact)
+        finish()
+        }
     }
 }
